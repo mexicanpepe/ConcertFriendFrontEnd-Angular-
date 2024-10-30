@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Create Concert</h2>
+  <form (ngSubmit)="submitConcert()">
+    <div class="form-group">
+      <label for="venue">Venue</label>
+      <input type="text" class="form-control" id="venue" [(ngModel)]="concert.venue" name="venue" required>
+    </div>
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" class="form-control" id="date" [(ngModel)]="concert.date" name="date" required>
+    </div>
+    <div class="form-group">
+      <label for="setlist">Setlist</label>
+      <textarea class="form-control" id="setlist" [(ngModel)]="concert.setlist" name="setlist"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="media">Media</label>
+      <input type="text" class="form-control" id="media" [(ngModel)]="concert.media" name="media">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+  </form>
+</div>

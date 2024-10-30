@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Search Artists..." />
+  </div>
+
+  <div class="list-group">
+    <div class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let artist of artists">
+      {{ artist.name }}
+      <button class="btn btn-success btn-sm" (click)="addConcertForArtist(artist.artist_id)">+</button>
+    </div>
+  </div>
+</div>
